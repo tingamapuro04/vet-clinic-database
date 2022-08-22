@@ -3,7 +3,7 @@
 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/tingamapuro04)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/adoyo-alphonc)e/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/adoyo-alphonce/)
 
 ## Show your support
 
