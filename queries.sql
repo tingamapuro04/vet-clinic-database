@@ -9,6 +9,13 @@ SELECT * FROM animals WHERE neutered <> '0';
 SELECT * FROM animals WHERE name <> 'Gabumon';
 SELECT * FROM animals WHERE weight_kg >= 10.40 AND weight_kg <= 17.30;
 
+SELECT COUNT(*) FROM animals;
+
+SELECT COUNT(*) FROM animals
+WHERE escape_attempts = 0;
+
+SELECT AVG(weight_kg) FROM animals;
+
 SELECT * FROM animals
 ORDER BY escape_attempts DESC
 LIMIT 1;
