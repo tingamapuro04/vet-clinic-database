@@ -19,3 +19,7 @@ SELECT AVG(weight_kg) FROM animals;
 SELECT * FROM animals
 ORDER BY escape_attempts DESC
 LIMIT 1;
+
+SELECT species, MIN(weight_kg), MAX(weight_kg)
+FROM animals
+GROUP BY species;
