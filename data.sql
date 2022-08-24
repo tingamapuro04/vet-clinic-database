@@ -17,6 +17,9 @@ INSERT INTO owners(full_name, age) VALUES
 ('Dean Winchester', 14),
 ('Jodie Whittaker', 38);
 
+INSERT INTO owners (full_name, age)
+ VALUES ('Sam Smith', 34);
+
 INSERT INTO species(name) VALUES('Pokemon'), ('Digimon');
 
 UPDATE animals
