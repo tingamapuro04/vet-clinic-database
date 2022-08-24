@@ -8,3 +8,11 @@ INSERT INTO animals VALUES
 (9, 'Boarmon', '2005-06-07', 7, '1', 20.40, NULL),
 (10, 'Blossom', '1998-10-13', 3, '1', 17.00, NULL),
 (11, 'Ditto', '2022-05-14', 4, '1', 22.00, NULL);
+
+
+INSERT INTO owners(full_name, age) VALUES
+('Jennifer Orwell', 19),
+('Bob', 45),
+('Melody Pond', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38);
