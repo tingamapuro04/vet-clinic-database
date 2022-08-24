@@ -26,3 +26,15 @@ WHERE name NOT LIKE '%mon';
 UPDATE animals
 SET species_id = 2
 WHERE name LIKE '%mon';
+
+UPDATE animals
+SET owner_id = 1
+WHERE name = 'Agumon';
+
+UPDATE animals
+SET owner_id = 5
+WHERE name = 'Angemon' OR name = 'Boarmon';
+
+UPDATE animals
+SET owner_id = 2
+WHERE name = 'Blossom';
