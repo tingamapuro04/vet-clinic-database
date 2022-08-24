@@ -9,6 +9,23 @@ SELECT * FROM animals WHERE neutered <> '0';
 SELECT * FROM animals WHERE name <> 'Gabumon';
 SELECT * FROM animals WHERE weight_kg >= 10.40 AND weight_kg <= 17.30;
 
+BEGIN;
+
+UPDATE animals
+SET species = 'unspecified';
+
+ROLLBACK;
+
+BEGIN;
+
+UPDATE animals
+SET species = 'digimon'
+WHERE name Like '%mon';
+
+UPDATE animals
+SET species = 'pokemon'
+WHERE name NOT LIKE '%mon';
+
 SELECT COUNT(*) FROM animals;
 
 SELECT COUNT(*) FROM animals
