@@ -22,3 +22,6 @@ CREATE TABLE species (
   id SERIAL PRIMARY KEY,
   name VARCHAR(15)
 );
+
+ALTER TABLE animals
+ADD id SERIAL PRIMARY KEY;
