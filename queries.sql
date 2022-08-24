@@ -34,6 +34,24 @@ DELETE FROM animals;
 
 ROLLBACK;
 
+BEGIN;
+
+DELETE FROM animals
+WHERE date_of_birth > '2022-01-01;
+
+SAVEPOINT SP1;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1;
+
+ROLBACK TO SP1;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1
+WHERE weight_kg < 0;
+
+COMMIT;
+
 SELECT COUNT(*) FROM animals;
 
 SELECT COUNT(*) FROM animals
