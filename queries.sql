@@ -26,6 +26,14 @@ UPDATE animals
 SET species = 'pokemon'
 WHERE name NOT LIKE '%mon';
 
+COMMIT;
+
+BEGIN;
+
+DELETE FROM animals;
+
+ROLLBACK;
+
 SELECT COUNT(*) FROM animals;
 
 SELECT COUNT(*) FROM animals
