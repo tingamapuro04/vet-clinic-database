@@ -103,3 +103,13 @@ FROM animals
 JOIN owners
 ON owner_id = owners.id
 GROUP BY owners.full_name;
+
+SELECT animals.name FROM animals
+JOIN visits 
+ON visits.animals_id = animals.id
+JOIN vets ON visits.vet_id =vets.id
+WHERE vets.name = 'William Tatcher'
+ORDER BY visits.date_of_visit DESC
+LIMIT 1
+;
+
