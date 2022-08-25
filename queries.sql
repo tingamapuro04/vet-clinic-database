@@ -150,3 +150,9 @@ JOIN species ON species.id = animals.species_id
 WHERE vets.name = 'Maisy Smith'
 GROUP BY species.name
 ORDER BY COUNT(*) DESC LIMIT 1;
+
+SELECT count(*) as number_of_visits_to_unspecialized_vets
+FROM
+    visits
+    LEFT JOIN specializations ON specializations.vet_id = visits.vet_id
+WHERE specializations.species_id IS NULL;
