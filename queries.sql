@@ -119,3 +119,34 @@ JOIN visits
 ON visits.animals_id = animals.id
 JOIN vets ON visits.vet_id =vets.id
 WHERE vets.name = 'Stephanie Mendez';
+
+
+SELECT animals.name FROM animals
+JOIN visits ON visits.animals_id = animals.id
+JOIN vets ON visits.vet_id = vets.id
+WHERE vets.name = 'Stephanie Mendez' AND visits.date_of_visit >= '2020-04-01' AND visits.date_of_visit <= '2020-08-30';
+
+SELECT COUNT(vets.id), animals.name FROM animals
+JOIN visits ON visits.animals_id = animals.id
+JOIN vets ON visits.vet_id = vets.id
+GROUP BY animals.name
+ORDER BY COUNT(vets.id) DESC LIMIT 1;
+
+SELECT animals.name FROM animals 
+JOIN visits V ON V.animals_id = animals.id
+JOIN vets P ON V.vet_id = P.id
+WHERE P.name = 'Maisy Smith'
+ORDER BY V.date_of_visit LIMIT 1;
+
+SELECT animals.name, V.date_of_visit, P.name FROM animals 
+JOIN visits V ON V.animals_id = animals.id
+JOIN vets P ON V.vet_id = P.id
+ORDER BY V.date_of_visit DESC LIMIT 1;
+
+SELECT species.name FROM visits
+JOIN animals ON visits.animals_id = animals.id
+JOIN vets ON visits.vet_id = vets.id
+JOIN species ON species.id = animals.species_id
+WHERE vets.name = 'Maisy Smith'
+GROUP BY species.name
+ORDER BY COUNT(*) DESC LIMIT 1;
