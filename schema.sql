@@ -68,3 +68,8 @@ INSERT INTO vets (name, age, date_of_graduation) values ('William Tatcher', 45, 
 ('Jack Harkness', 38, '2008-06-08');
 
 
+CREATE INDEX animals_asc ON visits (animals_id ASC);
+
+CREATE INDEX vet_desc ON visits (vet_id DESC);
+
+CREATE INDEX owner_asc ON owners(email ASC);
