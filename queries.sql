@@ -156,3 +156,7 @@ FROM
     visits
     LEFT JOIN specializations ON specializations.vet_id = visits.vet_id
 WHERE specializations.species_id IS NULL;
+
+explain analyze SELECT COUNT(*) FROM visits where visits.animals_id = 4;
+
+EXPLAIN ANALYSE SELECT * FROM visits where vet_id = 2;
