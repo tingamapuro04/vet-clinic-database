@@ -66,3 +66,10 @@ CREATE TABLE visits (
 
 INSERT INTO vets (name, age, date_of_graduation) values ('William Tatcher', 45, '2000-04-23'), ('Maisy Smith', 26, '2019-01-17'), ('Stephanie Mendez', 64, '1981-05-04'),
 ('Jack Harkness', 38, '2008-06-08');
+
+
+CREATE INDEX animals_asc ON visits (animals_id ASC);
+
+CREATE INDEX vet_desc ON visits (vet_id DESC);
+
+CREATE INDEX owner_asc ON owners(email ASC);
